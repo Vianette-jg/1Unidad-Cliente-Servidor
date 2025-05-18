@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="estilo-registro.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registro de Usuario</h2>
+    <form action="#" method="post">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="0" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="pais">País:</label>
+      <select id="pais" name="pais">
+        <option value="">Selecciona un país</option>
+        <option value="mexico">México</option>
+        <option value="colombia">Brasil</option>
+        <option value="argentina">Argentina</option>
+        <option value="españa">España</option>
+      </select>
+
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad" name="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="cdmx">Ciudad de México</option>
+        <option value="bogota">Rio de Jainero</option>
+        <option value="buenosaires">Buenos Aires</option>
+        <option value="madrid">Madrid</option>
+      </select>
+
+      <p>Pasatiempos:</p>
+      <label><input type="radio" name="pasatiempo" value="programacion"> programacion</label>
+      <label><input type="radio" name="pasatiempo" value="deporte"> Deporte</label>
+      <label><input type="radio" name="pasatiempo" value="videojuegos"> Videojuegos</label>
+      <label><input type="radio" name="pasatiempo" value="musica"> Música</label>
+
+      <div class="buttons">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
