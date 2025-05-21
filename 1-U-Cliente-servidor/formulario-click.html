@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+    <style>
+        body {
+            background-color: #FFF;
+            font-family: Calibri, sans-serif;
+        }
+
+        #caja {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            border: 2px solid #000;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form {
+            text-align: center;
+            padding: 15px;
+            margin: 5px;
+            background-color: #6afff5;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">
+        <form id="f">
+            <label>Nombre</label><br>
+            <input type="text" id="N"><br><br>
+            <input type="submit" value="boton" id="B">
+        </form>
+        <p>El nombre es:</p>
+        <p id="Nom"></p>
+    </div>
+
+    <script>
+        let form = document.querySelector("#f");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se recargue la página
+
+            let nombre = document.querySelector("#N").value;
+            document.querySelector("#Nom").textContent = nombre;
+        });
+    </script>
+</body>
+</html>
